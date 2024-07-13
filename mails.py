@@ -13,19 +13,19 @@ def send_email(recipient):
     from email.mime.text import MIMEText
     msg = MIMEText('This is a test email.')
     msg['Subject'] = 'Test Email'
-    msg['From'] = 'divine2142@gmail.com'
+    msg['From'] = 'sample@gmail.com'
     msg['To'] = recipient
 
     try:
         with smtplib.SMTP('smtp.gmail.com', 587) as server:
             server.starttls()  # Upgrade to a secure connection
-            server.login('divine2142@gmail.com', 'xtlcalmpcbjhfbnq')  # Log in to your Gmail account
+            server.login('sample@gmail.com', 'password')  # Log in to your Gmail account
             server.sendmail(msg['From'], [msg['To']], msg.as_string())  # Send the email
         print('Email sent successfully!')
     except Exception as e:
         print(f'Failed to send email: {e}')
 
-send_email('kenedinma@gmail.com')
+send_email('sample@gmail.com')
 
 @celery.task
 def log_time():
