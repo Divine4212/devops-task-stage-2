@@ -1,4 +1,4 @@
-# devops-task-stage-2
+# devops-task-stage-3
 ## Messaging System with RabbitMQ/Celery and Python Application behind Nginx
 
 # DevOps Project
